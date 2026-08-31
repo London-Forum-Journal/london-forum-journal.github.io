@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>The Architecture of Transition Intelligence | London Forum Journal</title>
 
-<meta name="description" content="An editorial conversation about continuity, transition-state awareness and the computational architecture of systems in motion.">
+<meta name="description"
+content="The London Forum Journal speaks with AI Systems Architect and independent researcher Anthea Tenayiah Leia Govender about transition intelligence, ENNORY, continuity and the next generation of intelligent systems.">
 
 <style>
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
+    margin: 0;
     background: #f7f6f2;
     color: #171717;
     font-family: Georgia, "Times New Roman", serif;
@@ -24,627 +28,710 @@ body {
 }
 
 header {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 48px 42px 28px;
-    border-bottom: 1px solid #cfcfc9;
+    max-width: 1050px;
+    margin: auto;
+    padding: 42px 55px 25px;
+    border-bottom: 1px solid #d8d5cf;
 }
 
 .logo {
-    font-size: 46px;
-    line-height: 1;
-    letter-spacing: -1.8px;
+    font-size: 42px;
+    letter-spacing: -1.5px;
 }
 
 .tagline {
-    margin-top: 12px;
     font-family: Arial, sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #666;
+    color: #777;
+    margin-top: 4px;
 }
 
 nav {
-    margin-top: 32px;
-    display: flex;
-    gap: 32px;
+    margin-top: 28px;
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
 }
 
 nav a {
     color: #222;
     text-decoration: none;
+    margin-right: 28px;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-.article-header {
-    max-width: 900px;
-    margin: 90px auto 55px;
-    padding: 0 42px;
+main {
+    max-width: 850px;
+    margin: auto;
+    padding: 75px 55px 100px;
 }
 
 .kicker {
     font-family: Arial, sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2.5px;
-    text-transform: uppercase;
     color: #777;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 66px;
-    line-height: 1.04;
-    font-weight: normal;
+    line-height: 1.02;
     letter-spacing: -2.5px;
-    max-width: 850px;
+    font-weight: normal;
+    margin: 0 0 30px;
 }
 
-.subtitle {
-    font-size: 23px;
+.deck {
+    font-size: 21px;
     line-height: 1.5;
     color: #555;
-    max-width: 760px;
-    margin-top: 28px;
+    max-width: 700px;
 }
 
-.meta {
-    margin-top: 32px;
+.byline {
+    margin-top: 30px;
     font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.8px;
     color: #666;
 }
 
-.rule {
-    max-width: 900px;
-    margin: 0 auto;
-    border-top: 1px solid #cfcfc9;
-}
-
-.article {
-    max-width: 900px;
-    margin: 55px auto 100px;
-    padding: 0 42px;
-}
-
 .intro {
-    font-size: 22px;
-    line-height: 1.65;
-    margin-bottom: 55px;
+    margin-top: 70px;
+    font-size: 19px;
 }
 
 .dropcap:first-letter {
     float: left;
-    font-size: 76px;
-    line-height: 60px;
-    padding-right: 9px;
+    font-size: 78px;
+    line-height: 55px;
+    padding-right: 8px;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 1.2;
     font-weight: normal;
-    margin: 65px 0 25px;
-    letter-spacing: -0.8px;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 25px;
+    margin-top: 70px;
 }
 
 .question {
-    margin-top: 50px;
-    margin-bottom: 18px;
     font-family: Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-top: 45px;
+    margin-bottom: 12px;
 }
 
 .answer {
-    font-size: 20px;
-    line-height: 1.75;
+    font-size: 18px;
 }
 
 .pullquote {
-    margin: 60px 0;
-    padding: 30px 0 30px 32px;
-    border-left: 3px solid #222;
-    font-size: 30px;
+    margin: 55px 0;
+    padding: 25px 30px;
+    border-left: 2px solid #222;
+    font-size: 25px;
     line-height: 1.35;
     font-style: italic;
 }
 
-.note {
+.editorial-note {
     margin: 55px 0;
-    padding: 28px;
-    background: #ecebe6;
+    padding: 25px;
+    background: #ebe9e3;
+    font-size: 14px;
+    color: #555;
+}
+
+.profile {
+    margin-top: 80px;
+    border-top: 1px solid #ccc;
+    padding-top: 25px;
+}
+
+.profile-title {
     font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.7;
-    color: #444;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
 }
 
 footer {
     background: #171717;
     color: #eee;
-    padding: 55px 42px;
+    padding: 50px;
 }
 
 .footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1050px;
+    margin: auto;
 }
 
 .footer-title {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .footer-text {
     font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 1px;
+    font-size: 10px;
     color: #aaa;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 @media (max-width: 700px) {
 
     header {
-        padding: 30px 24px 22px;
+        padding: 30px 25px 20px;
     }
 
-    .logo {
-        font-size: 35px;
-    }
-
-    nav {
-        gap: 17px;
-        flex-wrap: wrap;
-    }
-
-    .article-header {
-        margin-top: 55px;
-        padding: 0 24px;
+    main {
+        padding: 50px 25px 70px;
     }
 
     h1 {
-        font-size: 45px;
-        letter-spacing: -1.5px;
+        font-size: 43px;
     }
 
-    .subtitle {
-        font-size: 19px;
-    }
-
-    .article {
-        padding: 0 24px;
-    }
-
-    p {
-        font-size: 17px;
-    }
-
-    .answer {
+    .deck {
         font-size: 18px;
-    }
-
-    .pullquote {
-        font-size: 25px;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">London Forum Journal</div>
+<div class="logo">London Forum Journal</div>
 
-    <div class="tagline">
-        Innovation · Technology · Emerging Systems
-    </div>
+<div class="tagline">
+INNOVATION · TECHNOLOGY · EMERGING SYSTEMS
+</div>
 
-    <nav>
-        <a href="index.html">Journal</a>
-        <a href="index.html">Features</a>
-        <a href="index.html">Ideas</a>
-        <a href="index.html">Archive</a>
-        <a href="index.html">About</a>
-    </nav>
+<nav>
+<a href="index.html">JOURNAL</a>
+<a href="index.html">FEATURES</a>
+<a href="index.html">IDEAS</a>
+<a href="index.html">ARCHIVE</a>
+<a href="index.html">ABOUT</a>
+</nav>
 
 </header>
 
 
-<section class="article-header">
-
-    <div class="kicker">
-        Featured Editorial · LFJ-001
-    </div>
-
-    <h1>
-        The Architecture of Transition Intelligence
-    </h1>
+<main>
 
-    <div class="subtitle">
-        Why the most important part of a system may be the part we have traditionally treated as invisible.
-    </div>
+<div class="kicker">
+FEATURED INTERVIEW · LFJ-001
+</div>
 
-    <div class="meta">
-        London Forum Journal · Volume I · Issue 01 · 31 August 2026
-    </div>
-
-</section>
 
+<h1>
+The Architecture of<br>
+Transition Intelligence
+</h1>
 
-<div class="rule"></div>
-
-
-<main class="article">
-
-    <p class="intro dropcap">
-        Most systems are described by where they begin and where they end.
-        A machine has an input and an output. A scientific model has an initial
-        condition and a resulting state. An artificial intelligence system
-        receives information and produces an answer.
-    </p>
-
-    <p>
-        But between those points is an enormous territory that is usually
-        compressed into a word such as <em>process</em>, <em>computation</em>,
-        <em>change</em> or <em>transition</em>.
-    </p>
-
-    <p>
-        The London Forum Journal asked a deceptively simple question:
-        <strong>what if the transition itself deserves to be treated as an
-        object of computation?</strong>
-    </p>
-
-    <p>
-        What followed was not a discussion about making machines merely
-        faster. It was a discussion about whether our existing language for
-        intelligent systems is sufficiently expressive to describe continuity,
-        movement and changing conditions.
-    </p>
-
-
-    <h2>
-        The question behind the question
-    </h2>
-
-
-    <div class="question">
-        London Forum Journal: Why focus on the transition rather than the state?
-    </div>
-
-    <p class="answer">
-        The conventional state-based view is extremely powerful. It allows us
-        to identify a condition, measure it and compare it with another
-        condition. But many of the most difficult problems in technology do not
-        occur inside stable states. They occur while something is changing.
-    </p>
-
-    <p class="answer">
-        A system may be moving from one configuration to another while
-        simultaneously receiving new information, retaining traces of what
-        happened previously and responding to its environment.
-    </p>
-
-    <p class="answer">
-        That intermediate territory is often where uncertainty accumulates.
-        It is also where decisions become consequential.
-    </p>
-
-    <div class="pullquote">
-        “The question is not simply where a system is. The deeper question is
-        what is happening to the system while it is becoming something else.”
-    </div>
-
-
-    <div class="question">
-        London Forum Journal: Does that mean existing computational models are inadequate?
-    </div>
-
-    <p class="answer">
-        Not necessarily. Existing mathematics and computer science provide
-        extraordinarily sophisticated ways of describing dynamics, state
-        spaces, probabilities, networks and transformations.
-    </p>
-
-    <p class="answer">
-        The argument is more specific: perhaps these capabilities have not
-        yet been assembled into a general computational language whose
-        primary object is the continuity of transition itself.
-    </p>
-
-    <p class="answer">
-        The distinction matters. A system can calculate two states extremely
-        accurately and still provide a weak representation of the path
-        connecting them.
-    </p>
-
-
-    <h2>
-        From sequence to geometry
-    </h2>
-
-    <p>
-        One of the most interesting implications is that transition does not
-        necessarily have to be represented as a simple linear sequence.
-    </p>
-
-    <p>
-        Consider a system represented by connected nodes. A change in one
-        region can alter the conditions surrounding several others. The
-        resulting behaviour is therefore not merely a list of events. It is a
-        changing relationship between positions, connections and constraints.
-    </p>
-
-    <p>
-        Geometry becomes interesting here because geometry provides a language
-        for relationships.
-    </p>
-
-    <p>
-        Distance, adjacency, direction, connectivity, symmetry and topology
-        can all become computational properties rather than merely visual
-        descriptions.
-    </p>
-
-
-    <div class="question">
-        London Forum Journal: Is this where the nine-node architecture becomes significant?
-    </div>
-
-    <p class="answer">
-        The nine-node structure provides a finite geometric framework within
-        which transitions can be represented. The important idea is not that
-        nine is inherently superior to every other number. Its significance
-        comes from the discipline imposed by a finite cyclic structure.
-    </p>
-
-    <p class="answer">
-        Within such a structure, movement is constrained. A system can change,
-        but its possible transitions are not unlimited. Connectivity becomes
-        part of the computational rule.
-    </p>
-
-    <p class="answer">
-        This produces a different perspective on stability. Stability does not
-        necessarily mean that nothing moves. It can mean that movement remains
-        within a defined architecture.
-    </p>
-
-
-    <h2>
-        What would an intelligent transition look like?
-    </h2>
-
-    <p>
-        The phrase “transition intelligence” can sound abstract until it is
-        applied to an actual system.
-    </p>
-
-    <p>
-        Imagine an autonomous system receiving a continuous stream of signals.
-        Rather than treating every incoming signal as an isolated event, the
-        system maintains an evolving representation of its current condition,
-        its recent trajectory and the relationships between relevant variables.
-    </p>
-
-    <p>
-        The system is no longer asking only:
-        <em>What is the current state?</em>
-    </p>
-
-    <p>
-        It is also asking:
-        <em>What changed?</em>
-        <em>What is changing?</em>
-        <em>Which relationships are being disturbed?</em>
-        <em>Which transitions remain permissible?</em>
-    </p>
-
-    <div class="pullquote">
-        “Intelligence may not only be the ability to reach an answer. It may
-        also be the ability to maintain coherence while moving toward one.”
-    </div>
-
-
-    <div class="question">
-        London Forum Journal: Could this change the way artificial intelligence is designed?
-    </div>
-
-    <p class="answer">
-        Potentially. Much of contemporary AI is organised around prediction,
-        classification, generation and decision. These are valuable
-        capabilities, but they do not completely describe continuity.
-    </p>
-
-    <p class="answer">
-        A system operating continuously needs to understand more than the
-        latest observation. It needs some representation of how the present
-        emerged from the immediately preceding conditions.
-    </p>
-
-    <p class="answer">
-        This is particularly important when an environment changes faster
-        than a system can simply recalculate from scratch.
-    </p>
-
-    <p class="answer">
-        Transition intelligence therefore suggests an architectural layer
-        concerned with continuity: maintaining the relationship between
-        incoming signals, previous conditions and permissible next states.
-    </p>
-
-
-    <h2>
-        The overlooked computational territory
-    </h2>
-
-    <p>
-        There is a broader philosophical consequence.
-    </p>
-
-    <p>
-        Technology has become exceptionally good at describing objects.
-        Sensors can measure them. Databases can store them. Models can classify
-        them. Algorithms can optimise around them.
-    </p>
-
-    <p>
-        But increasingly intelligent systems operate in environments where
-        objects are not isolated and conditions are never completely static.
-    </p>
-
-    <p>
-        The future problem may therefore be less about producing more
-        information and more about understanding the relationships between
-        changing information.
-    </p>
-
-    <p>
-        That is the territory transition intelligence attempts to formalise.
-    </p>
-
-
-    <div class="note">
-        <strong>Editorial note</strong><br><br>
-        This article is an editorial exploration of an emerging computational
-        perspective. The framework discussed should be evaluated through its
-        formal definitions, mathematical treatment, implementations and
-        empirical evidence. Publication in the London Forum Journal represents
-        editorial presentation and does not, by itself, constitute independent
-        scientific validation.
-    </div>
-
-
-    <h2>
-        A different definition of stability
-    </h2>
-
-    <p>
-        Perhaps the most provocative consequence of the framework is its
-        treatment of stability.
-    </p>
-
-    <p>
-        In many engineering contexts, stability is associated with resisting
-        disturbance. Yet biological, technological and computational systems
-        frequently remain functional precisely because they can change.
-    </p>
-
-    <p>
-        A system that cannot move is not necessarily stable. It may simply be
-        rigid.
-    </p>
-
-    <p>
-        A more useful question may be whether a system can move through
-        changing conditions without losing its structural coherence.
-    </p>
-
-    <p>
-        This reframes stability as something dynamic: not the absence of
-        movement, but the preservation of relationships during movement.
-    </p>
-
-
-    <div class="question">
-        London Forum Journal: So what ultimately is transition intelligence?
-    </div>
-
-    <p class="answer">
-        At its most concise, it is an attempt to make continuity computational.
-    </p>
-
-    <p class="answer">
-        It treats the changing relationship between states as something that
-        can be represented, constrained and analysed rather than discarded as
-        an inconvenient space between two answers.
-    </p>
-
-    <p class="answer">
-        Whether that becomes a useful general architecture will depend on
-        formalisation, implementation and independent testing.
-    </p>
-
-    <p class="answer">
-        But the question itself is worth keeping.
-    </p>
-
-
-    <h2>
-        The question worth carrying forward
-    </h2>
-
-    <p>
-        Every intelligent system exists in time.
-    </p>
-
-    <p>
-        Every decision follows something.
-    </p>
-
-    <p>
-        Every new state has a trajectory behind it.
-    </p>
-
-    <p>
-        Perhaps the next generation of computational systems will not be
-        defined solely by how accurately they identify a state or predict an
-        outcome.
-    </p>
-
-    <p>
-        Perhaps they will also be judged by how well they understand the
-        territory between them.
-    </p>
-
-    <p>
-        That territory has always been there.
-    </p>
-
-    <p>
-        The emerging question is whether we can finally give it a formal
-        language.
-    </p>
+
+<div class="deck">
+
+The London Forum Journal meets AI Systems Architect and independent researcher Anthea Tenayiah Leia Govender to discuss ENNORY, the intelligence of systems in motion, and why the next frontier of computing may not be another answer — but a better understanding of what happens between them.
+
+</div>
+
+
+<div class="byline">
+LONDON FORUM JOURNAL · 31 AUGUST 2026
+</div>
+
+
+<div class="intro dropcap">
+
+Technology has a habit of making yesterday's impossible look strangely obvious.
+
+Artificial intelligence is now moving from laboratories into hospitals, infrastructure, finance, research and everyday life. Systems are becoming increasingly capable of predicting, generating, classifying and responding.
+
+But as the technology becomes more sophisticated, another question begins to emerge:
+
+<strong>What happens while the system is changing?</strong>
+
+The London Forum Journal follows emerging technology precisely because the most interesting ideas are not always the ones already sitting comfortably inside established categories.
+
+Sometimes the interesting territory is the gap between them.
+
+For this issue, we spoke with <strong>Anthea Tenayiah Leia Govender</strong>, an AI Systems Architect, independent researcher and founder of the ENNORY Intelligence Platform, whose work explores continuity, transition states, geometry and the behaviour of systems while they move between conditions.
+
+The conversation is less about predicting the future than examining whether we have been describing intelligent systems correctly in the first place.
+
+</div>
+
+
+<h2>
+The question behind the question
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+You've worked across artificial intelligence, healthcare innovation and emerging technology. What made you become interested in transition itself?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+I became interested in the part that tends to disappear from the description.
+
+We often describe systems by their conditions. We measure where something begins and where it ends. But between those conditions, something is happening.
+
+A system is changing configuration. Relationships are changing. Information is being carried forward. Some structures are being preserved while others are being altered.
+
+That transition is not necessarily empty space.
+
+It can contain information.
+
+And once you start looking at it that way, you begin asking whether our computational models are giving that territory enough attention.
+
+</div>
+
+
+<div class="pullquote">
+
+“The interesting question isn't simply where a system is. It is how the system remains coherent while it is becoming something else.”
+
+</div>
+
+
+<h2>
+Beyond the answer
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+Is that what you mean by transition intelligence?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+Partly.
+
+We normally associate intelligence with the ability to process information, recognise patterns, make predictions or produce an answer.
+
+But I think there is another dimension worth investigating.
+
+Can an intelligent system understand its own continuity?
+
+Can it understand what changed, what remained stable, which relationships were altered, and what those changes mean for the next configuration?
+
+That is where I began thinking about transition intelligence.
+
+I don't see it as replacing existing forms of artificial intelligence.
+
+I see it as asking whether there is another layer that we have not formalised adequately yet.
+
+</div>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+That sounds deceptively simple.
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+The simple questions are often the difficult ones.
+
+We can say, “the system changed.”
+
+But that doesn't necessarily tell us how it changed.
+
+It doesn't necessarily tell us what relationships were maintained.
+
+It doesn't necessarily tell us whether the transition was coherent.
+
+And it certainly doesn't automatically give us a computational representation of the journey itself.
+
+</div>
+
+
+<h2>
+Why geometry enters the conversation
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+Your work also introduces geometry. Why?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+Because geometry is fundamentally about relationships.
+
+A point tells you where something is.
+
+A structure tells you how things relate.
+
+When you begin thinking about connectivity, direction, adjacency and permitted movement, geometry becomes much more interesting than a picture on a screen.
+
+It can become a language for describing how a system is organised and how it moves.
+
+That's important to ENNORY.
+
+The objective isn't simply to draw a nine-node structure and call it intelligent.
+
+The deeper question is whether a constrained geometric structure can provide a useful computational representation of transition.
+
+</div>
+
+
+<div class="editorial-note">
+
+<strong>EDITOR'S NOTE</strong><br><br>
+
+The London Forum Journal approaches emerging technological ideas as subjects for examination rather than as declarations of established scientific fact. The concepts discussed here represent Govender's research direction and should be evaluated through their underlying mathematical, computational and experimental work.
+
+</div>
+
+
+<h2>
+The ENNORY question
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+Let's talk about ENNORY specifically. What are you trying to build?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+ENNORY is my attempt to give this idea an architecture.
+
+At the centre is a nine-node geometric system in which movement is treated as a structured transition rather than simply a sequence of unrelated states.
+
+The important distinction is that the nodes aren't intended to be a hierarchy.
+
+They represent positions within a constrained relational system.
+
+The system can move, redistribute relationships and change configuration while remaining within its defined geometry.
+
+That gives me a way to investigate continuity computationally.
+
+</div>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+And where does this ultimately lead?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+Potentially much further than the original question.
+
+If you can represent transition, you can start asking whether systems can reason about transition.
+
+That could have implications for artificial intelligence, simulation, robotics, complex systems and potentially any environment where understanding change is as important as understanding state.
+
+But I'm careful about making that leap too quickly.
+
+The architecture has to earn the claim.
+
+</div>
+
+
+<h2>
+The uncomfortable question
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+Let's challenge it. What if the idea doesn't work?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+Then the experiments should tell us.
+
+I think that's essential.
+
+An interesting idea isn't automatically a scientific result.
+
+If ENNORY is going to become meaningful beyond its conceptual foundation, it needs formal definitions, mathematical treatment, implementations and experiments that can test where the framework succeeds and where it doesn't.
+
+I'm much more interested in making the proposition testable than making it untouchable.
+
+</div>
+
+
+<div class="pullquote">
+
+“An idea becomes interesting to me when you can make it precise enough for someone else to challenge.”
+
+</div>
+
+
+<h2>
+From healthcare to intelligent systems
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+Your public work has also explored AI, genomics, healthcare innovation and the role of technology in clinical environments. Is there a connection?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+Absolutely.
+
+Healthcare made the problem of continuity particularly visible to me.
+
+A clinical environment isn't really a collection of isolated data points.
+
+It's a journey.
+
+Something changes. A test produces information. A clinician responds. A treatment changes the patient's condition. Another decision follows.
+
+The meaning isn't always contained in one individual data point.
+
+It emerges from the relationship between them.
+
+That is a very different way of thinking about intelligence.
+
+Technology shouldn't simply give us more information.
+
+It should help us understand what is changing and why that change matters.
+
+</div>
+
+
+<h2>
+The future isn't standing still
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+The technology industry is moving incredibly quickly. Where do you think we're going wrong?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+I don't think we're necessarily going wrong.
+
+I think we're becoming capable of building systems faster than we are developing the conceptual language needed to describe them.
+
+AI is changing.
+
+Infrastructure is changing.
+
+Healthcare is changing.
+
+The relationship between humans and computational systems is changing.
+
+We therefore need architectures that can deal with change itself.
+
+That's the part I'm interested in.
+
+</div>
+
+
+<h2>
+What comes next?
+</h2>
+
+
+<div class="question">
+LONDON FORUM JOURNAL
+</div>
+
+<div class="answer">
+
+If you could leave researchers and technologists with one question, what would it be?
+
+</div>
+
+
+<div class="question">
+ANTHEA TENAYIAH LEIA GOVENDER
+</div>
+
+<div class="answer">
+
+I'd ask them to look at the part of the system they normally leave unnamed.
+
+The transition.
+
+The interval.
+
+The relationship.
+
+The moment where one configuration becomes another.
+
+We have become extraordinarily good at describing states.
+
+Perhaps the next challenge is learning how to describe the intelligence of moving between them.
+
+</div>
+
+
+<h2>
+The Journal's take
+</h2>
+
+
+<div class="answer">
+
+There is something revealing about Govender's proposition precisely because it does not begin with a claim that artificial intelligence has reached its destination.
+
+It begins with movement.
+
+The London Forum Journal's interest in emerging technology has always been less about predicting which idea will win and more about identifying the questions that technology is beginning to make unavoidable.
+
+Transition may be one of them.
+
+Whether ENNORY ultimately develops into a useful computational architecture, a broader research framework or something that evolves considerably beyond its present form will depend on formalisation and evidence.
+
+But the question behind it is difficult to dismiss:
+
+<strong>What if the space between states is not merely where computation happens — but something computation should understand?</strong>
+
+That may be a question worth carrying forward.
+
+</div>
+
+
+<div class="profile">
+
+<div class="profile-title">
+ABOUT THE INTERVIEWEE
+</div>
+
+<p>
+
+<strong>Anthea Tenayiah Leia Govender</strong> is an AI Systems Architect, independent researcher and founder of the ENNORY Intelligence Platform. Her work explores emerging approaches to artificial intelligence, computational systems, transition-state modelling and continuity. Her broader innovation work has also examined AI-enabled healthcare, genomics, smart hospital systems and responsible technology design.
+
+</p>
+
+</div>
 
 </main>
 
 
 <footer>
 
-    <div class="footer-inner">
+<div class="footer-inner">
 
-        <div class="footer-title">
-            London Forum Journal
-        </div>
+<div class="footer-title">
+London Forum Journal
+</div>
 
-        <div class="footer-text">
-            Independent Journal of Innovation, Technology & Emerging Systems
-        </div>
+<div class="footer-text">
+Independent Journal of Innovation, Technology & Emerging Systems.
+</div>
 
-    </div>
+</div>
 
 </footer>
 
 </body>
+
 </html>
