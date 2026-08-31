@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>London Forum Journal</title>
+
+<meta name="description"
+content="London Forum Journal — Independent Journal of Innovation, Technology & Emerging Systems.">
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #171717;
+        background: #f7f6f2;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .topline {
+        height: 5px;
+        background: #151515;
+    }
+
+    header {
+        background: #f7f6f2;
+        padding: 38px 7% 28px;
+        border-bottom: 1px solid #c9c6bd;
+    }
+
+    .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+    }
+
+    .journal-name {
+        font-size: clamp(2.4rem, 5vw, 5rem);
+        letter-spacing: -2px;
+        font-weight: normal;
+        line-height: 0.95;
+    }
+
+    .journal-subtitle {
+        margin-top: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.76rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #555;
+    }
+
+    .issue {
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    nav {
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid #d4d1c8;
+        display: flex;
+        gap: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.74rem;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 55px 7% 80px;
+    }
+
+    .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1.55fr 0.75fr;
+        gap: 65px;
+        padding-bottom: 55px;
+        border-bottom: 1px solid #c9c6bd;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 5vw, 5.4rem);
+        font-weight: normal;
+        line-height: 1.02;
+        letter-spacing: -2px;
+        max-width: 900px;
+    }
+
+    .dek {
+        font-size: 1.25rem;
+        color: #4a4a4a;
+        max-width: 750px;
+        margin-top: 24px;
+    }
+
+    .byline {
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .hero-side {
+        border-left: 1px solid #c9c6bd;
+        padding-left: 30px;
+    }
+
+    .hero-side p {
+        font-size: 1rem;
+        color: #444;
+    }
+
+    .read {
+        display: inline-block;
+        margin-top: 28px;
+        border-bottom: 1px solid #171717;
+        padding-bottom: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    .section {
+        padding: 50px 0;
+        border-bottom: 1px solid #c9c6bd;
+    }
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 3px solid #171717;
+        padding-bottom: 12px;
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+
+    .section-title span {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #666;
+    }
+
+    .articles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    article {
+        padding-right: 25px;
+        border-right: 1px solid #d0cdc5;
+    }
+
+    article:last-child {
+        border-right: none;
+    }
+
+    article h3 {
+        font-size: 1.65rem;
+        font-weight: normal;
+        line-height: 1.15;
+        margin-bottom: 13px;
+    }
+
+    article p {
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .article-meta {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #777;
+        margin-bottom: 12px;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .about p {
+        color: #4a4a4a;
+        font-size: 1rem;
+    }
+
+    footer {
+        background: #171717;
+        color: #eee;
+        padding: 45px 7%;
+    }
+
+    .footer-inner {
+        max-width: 1250px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer-title {
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+
+    .footer-text {
+        margin-top: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.72rem;
+        color: #aaa;
+        max-width: 500px;
+    }
+
+    .footer-right {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.65rem;
+        color: #999;
+        text-align: right;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 800px) {
+        .masthead,
+        .hero,
+        .about,
+        .footer-inner {
+            display: block;
+        }
+
+        .issue {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        nav {
+            flex-wrap: wrap;
+        }
+
+        .hero-side {
+            border-left: none;
+            border-top: 1px solid #c9c6bd;
+            padding: 25px 0 0;
+            margin-top: 35px;
+        }
+
+        .articles {
+            grid-template-columns: 1fr;
+        }
+
+        article {
+            border-right: none;
+            border-bottom: 1px solid #d0cdc5;
+            padding: 0 0 25px;
+        }
+
+        .about > div + div {
+            margin-top: 35px;
+        }
+
+        .footer-right {
+            text-align: left;
+            margin-top: 25px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="topline"></div>
+
+<header>
+    <div class="masthead">
+
+        <div>
+            <div class="journal-name">
+                London Forum Journal
+            </div>
+
+            <div class="journal-subtitle">
+                Innovation · Technology · Emerging Systems
+            </div>
+        </div>
+
+        <div class="issue">
+            Volume I<br>
+            Issue 01<br>
+            2026
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#">Journal</a>
+        <a href="#">Features</a>
+        <a href="#">Ideas</a>
+        <a href="#">Archive</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div>
+            <div class="label">Featured Editorial · LFJ-001</div>
+
+            <h1>
+                The Architecture of Transition Intelligence
+            </h1>
+
+            <p class="dek">
+                Exploring a computational approach to continuity,
+                transition-state awareness and the geometry of systems
+                in motion.
+            </p>
+
+            <div class="byline">
+                Anthea Tenayiah Leia Govender
+                · 31 August 2026
+            </div>
+
+            <a class="read" href="#">
+                Read feature →
+            </a>
+        </div>
+
+
+        <div class="hero-side">
+
+            <div class="label">From the Journal</div>
+
+            <p>
+                The London Forum Journal examines emerging ideas
+                at the intersection of technology, systems thinking,
+                computational intelligence and innovation.
+            </p>
+
+            <p style="margin-top:20px;">
+                This inaugural issue introduces a perspective on
+                transition as an active computational territory rather
+                than merely a passage between defined states.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Current Issue</h2>
+            <span>Vol. I · No. 01 · 2026</span>
+        </div>
+
+
+        <div class="articles">
+
+            <article>
+
+                <div class="article-meta">
+                    Feature · LFJ-001
+                </div>
+
+                <h3>
+                    The Architecture of Transition Intelligence
+                </h3>
+
+                <p>
+                    A conceptual examination of continuity cognition
+                    and computational models designed to understand
+                    systems while they move between stable conditions.
+                </p>
+
+                <a class="read" href="#">
+                    Read article
+                </a>
+
+            </article>
+
+
+            <article>
+
+                <div class="article-meta">
+                    Systems · LFJ-002
+                </div>
+
+                <h3>
+                    Geometry as an Operational Language
+                </h3>
+
+                <p>
+                    Why geometric structures can provide a useful
+                    language for describing relationships, movement,
+                    connectivity and system behaviour.
+                </p>
+
+                <a class="read" href="#">
+                    Read article
+                </a>
+
+            </article>
+
+
+            <article>
+
+                <div class="article-meta">
+                    Ideas · LFJ-003
+                </div>
+
+                <h3>
+                    Beyond the Static State
+                </h3>
+
+                <p>
+                    A perspective on the computational challenge of
+                    representing what happens between one identifiable
+                    state and another.
+                </p>
+
+                <a class="read" href="#">
+                    Read article
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="about">
+
+            <div>
+                <div class="label">About the Journal</div>
+
+                <h2>
+                    A forum for emerging systems thinking.
+                </h2>
+
+                <p>
+                    London Forum Journal is an independent editorial
+                    publication focused on ideas emerging across
+                    technology, computational systems, innovation and
+                    interdisciplinary research.
+                </p>
+            </div>
+
+
+            <div>
+                <div class="label">Editorial Position</div>
+
+                <p>
+                    The journal presents original perspectives,
+                    technical concepts and emerging frameworks while
+                    distinguishing editorial publication from formal
+                    peer review or institutional accreditation.
+                </p>
+
+                <p style="margin-top:18px;">
+                    Publication does not by itself constitute
+                    independent scientific validation. Readers are
+                    encouraged to examine the underlying work,
+                    evidence and references associated with each
+                    article.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <div class="footer-title">
+                London Forum Journal
+            </div>
+
+            <div class="footer-text">
+                Independent Journal of Innovation, Technology &
+                Emerging Systems.
+            </div>
+        </div>
+
+
+        <div class="footer-right">
+            VOL. I · ISSUE 01 · 2026<br>
+            London Forum Journal<br>
+            Independent Publication
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
