@@ -198,8 +198,6 @@ footer {
     .deck {
         font-size: 18px;
     }
-
-}
 .article-image {
     margin: 38px 0;
     text-align: center;
@@ -213,14 +211,19 @@ footer {
 }
 
 .article-image.square img {
-    width: 240px;
-    height: 240px;
+    width: 42%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    height: 420px;
     object-fit: cover;
+    display: inline-block;
 }
 
 .article-image.master img {
     width: 65%;
     max-width: 620px;
+    height: auto;
+    display: inline-block;
 }
 
 .article-image figcaption {
@@ -237,8 +240,11 @@ footer {
     }
 
     .article-image.square img {
-    width: 140px;
-    height: 140px;
+        width: 58%;
+        max-width: 300px;
+        aspect-ratio: 1 / 1;
+        height: 300px;
+        object-fit: cover;
     }
 
     .article-image.master img {
@@ -247,11 +253,7 @@ footer {
     }
 
 }
-}
 
-
-
-    
 
 </style>
 
