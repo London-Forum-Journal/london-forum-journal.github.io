@@ -206,10 +206,21 @@ footer {
 }
 
 .article-image img {
-    width: 28%;
-    max-width: 280px;
+    width: 42%;
+    max-width: 420px;
     height: auto;
     display: inline-block;
+}
+
+.article-image.square img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.article-image.master img {
+    width: 65%;
+    max-width: 620px;
 }
 
 .article-image figcaption {
@@ -219,10 +230,23 @@ footer {
 }
 
 @media (max-width: 700px) {
+
     .article-image img {
-        width: 48%;
-        max-width: 240px;
+        width: 58%;
+        max-width: 300px;
     }
+
+    .article-image.square img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .article-image.master img {
+        width: 82%;
+        max-width: 420px;
+    }
+
+}
 }
 
 
